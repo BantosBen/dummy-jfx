@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Dashboard">
+   <children>
+      <Label layoutX="155.0" layoutY="33.0" text="Add new Member">
+         <font>
+            <Font name="Ubuntu Light" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmailInsert" layoutX="78.0" layoutY="105.0" prefHeight="36.0" prefWidth="287.0" promptText="Email">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNameInsert" layoutX="78.0" layoutY="175.0" prefHeight="36.0" prefWidth="287.0" promptText="Name">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPasswordInsert" layoutX="78.0" layoutY="254.0" prefHeight="36.0" prefWidth="287.0" promptText="Password">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnSaveInsert" buttonType="RAISED" layoutX="78.0" layoutY="334.0" onAction="#insert" prefHeight="36.0" prefWidth="287.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Light" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="-103.0" endY="338.0" layoutX="531.0" layoutY="39.0" startX="-103.0" startY="-24.0" strokeWidth="3.0" />
+      <Label layoutX="559.0" layoutY="28.0" text="Edit Member">
+         <font>
+            <Font name="Ubuntu Light" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmailUpdate" layoutX="485.0" layoutY="122.0" prefHeight="36.0" prefWidth="287.0" promptText="Email">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNameUpdate" layoutX="485.0" layoutY="192.0" prefHeight="36.0" prefWidth="287.0" promptText="Name">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPasswordUpdate" layoutX="485.0" layoutY="271.0" prefHeight="36.0" prefWidth="287.0" promptText="Password">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnSaveUpdate" buttonType="RAISED" layoutX="485.0" layoutY="351.0" onAction="#update" prefHeight="36.0" prefWidth="287.0" style="-fx-background-color: #ffd800;" text="Save">
+         <font>
+            <Font name="Ubuntu Light" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtSearchUpdate" layoutX="485.0" layoutY="80.0" prefHeight="25.0" prefWidth="221.0" promptText="search by ID" />
+      <JFXButton fx:id="btnSearchUpdate" layoutX="706.0" layoutY="79.0" onAction="#searchUpdate" prefHeight="25.0" prefWidth="65.0" style="-fx-border-color: grey;" text="Search">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="943.0" layoutY="32.0" text="Delete Member">
+         <font>
+            <Font name="Ubuntu Light" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmailDelete" editable="false" layoutX="869.0" layoutY="126.0" prefHeight="36.0" prefWidth="287.0" promptText="Email">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNameDelete" editable="false" layoutX="869.0" layoutY="196.0" prefHeight="36.0" prefWidth="287.0" promptText="Name">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPasswordDelete" editable="false" layoutX="869.0" layoutY="275.0" prefHeight="36.0" prefWidth="287.0" promptText="Password">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="869.0" layoutY="355.0" onAction="#delete" prefHeight="36.0" prefWidth="287.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Light" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtSearchDelete" layoutX="869.0" layoutY="84.0" prefHeight="25.0" prefWidth="221.0" promptText="search by ID" />
+      <JFXButton fx:id="btnSearchDelete" layoutX="1090.0" layoutY="83.0" onAction="#searchDelete" prefHeight="25.0" prefWidth="65.0" style="-fx-border-color: grey;" text="Search">
+         <font>
+            <Font name="Ubuntu Light" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="-103.0" endY="338.0" layoutX="918.0" layoutY="40.0" startX="-103.0" startY="-24.0" strokeWidth="3.0" />
+      <Label layoutX="555.0" layoutY="447.0" text="View Member">
+         <font>
+            <Font name="Ubuntu Light" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMembers" layoutX="335.0" layoutY="545.0" prefHeight="200.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="73.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="230.0" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="229.0" text="Email" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnDeleteAll" buttonType="RAISED" layoutX="468.0" layoutY="492.0" onAction="#deleteAll" prefHeight="36.0" prefWidth="287.0" style="-fx-background-color: red;" text="Delete All" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Light" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
